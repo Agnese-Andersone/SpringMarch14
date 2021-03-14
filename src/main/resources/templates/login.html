@@ -9,9 +9,9 @@ Log in here
 <a href="/" th:href="@{/}">Home</a> <br>
 <form th:action="@{/login}" method="post">
     <label>Login</label>
-    <input type="text">
+    <input type="text" name="username">
     <label>Password</label>
-    <input type="password">
+    <input type="password" name="password">
     <input type="submit" value="Submit">
 
 </form>

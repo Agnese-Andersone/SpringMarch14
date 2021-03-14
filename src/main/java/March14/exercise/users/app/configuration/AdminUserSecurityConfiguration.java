@@ -31,6 +31,9 @@ public class AdminUserSecurityConfiguration extends WebSecurityConfigurerAdapter
             .antMatchers("/logged_in").authenticated()
             .anyRequest().permitAll()
             .and()
-            .formLogin();
+            .formLogin()
+            .loginPage("/login").permitAll()
+            .and()
+            .exceptionHandling().accessDeniedPage("/unauthorized");
     }
 }

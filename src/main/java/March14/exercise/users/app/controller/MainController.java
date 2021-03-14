@@ -11,10 +11,5 @@ public class MainController {
         return "index";
 
     }
-    @GetMapping("/logged_in")
-    public String getLoggedIn(){
-        return "logged_in";
-    }
-
 
 }

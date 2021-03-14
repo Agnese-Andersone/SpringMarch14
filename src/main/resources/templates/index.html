@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
+    <style>
+        h1 {color:green;
+            text-align:center;}
+        p {color:green;}
+        a {color:blue;}
+    </style>
 </head>
-<body>
+<body style="background-color:#f3ffe6;">
 <h1>This is for everybody.</h1> <br>
-<a href="/" th:href="@{/login}">Login here</a> <br>
-<a href="/" th:href="@{/logged_in}">Check this out</a> <br>
-<a href="/" th:href="@{/admin}">If you are an admin, click here</a>
+<p> You've landed in a page I just created for all users. <br>
+Please, select what do you want to do next. </p> <br>
+<a href="/" th:href="@{/login}">Login</a> <br>
+<a href="/" th:href="@{/logged_in}">View news feed</a> <br>
+<a href="/" th:href="@{/admin}">Go to admins' page</a>
 </body>
 </html>

@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
+    <style>
+        h1 {color:brown;
+            text-align:center;}
+        p {color:blue;}
+    </style>
 </head>
-<body>
+<body style="background-color:#e7ffb3;">
 <h1>This is a page for admins only.</h1>
+<p>Only admins can type and save some news here. Please, add news text and Submit it. </p>
+
+<form th:action="@{/logged_in/create}" th:object="${newNews}" method="post">
+    <label>News text</label>
+    <input th:field="${newNews.text}" type="text"/>
+    <input type="Submit"/>
+</form>
 <br>
-<a href="/" th:href="@{/}">Home</a>
+<p>Go and check out the <a href="/" th:href="@{/logged_in}">News feed</a> </p>
+<p>Return back to <a href="/" th:href="@{/}">Home</a> page </p>
 </body>
 </html>

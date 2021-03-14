@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Cool page</title>
+    <style>
+        h1 {color:brown;
+            text-align:center;}
+        p {color:blue;}
+        div {color:blue;
+             text-align:center;}
+
+    </style>
 </head>
-<body>
+<body style="background-color:#ccff99;">
 <h1>This could be a cool page some day.</h1> <br>
-<a href="/" th:href="@{/}">Home</a>
+<p>All the news posted by admins appear here:</p>
+<br>
+<div th:each=" news : ${allNews}">
+    <p th:text="${news.text}"></p>
+</div>
+<br>
+<p> Return back to <a href="/" th:href="@{/}">Home</a> page </p>
+<p> If you are an admin, then go to <a href="/" th:href="@{/admin}">admins' page</a></p>
 </body>
 </html>

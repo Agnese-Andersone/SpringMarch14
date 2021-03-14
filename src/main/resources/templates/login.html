@@ -3,20 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <title>Hello</title>
+        <style>
+            h1 {color:brown;
+                text-align:center;}
+            p {color:blue;}
+            a {color:green;}
+        </style>
     </head>
-<body>
-Log in here
-<a href="/" th:href="@{/}">Home</a> <br>
+<body style="background-color:#e6ffcc;">
+<h1> Log in here </h1>
+<p> Right here you need to remember your user name and password to get to further contents. </p><br>
+
 <form th:action="@{/login}" method="post">
-    <label>Login</label>
-    <input type="text" name="username">
-    <label>Password</label>
-    <input type="password" name="password">
-    <input type="submit" value="Submit">
+    <label>Login</label><br>
+    <input type="text" name="username"><br><br>
+    <label>Password</label><br>
+    <input type="password" name="password"><br><br>
+    <input type="submit" value="Submit"> <br><br>
 
 </form>
-<br>
-<a href="/" th:href="@{/logged_in}">Check this out</a> <br>
-<a href="/" th:href="@{/admin}">If you are an admin, click here</a>
+<p>Go back to <a href="/" th:href="@{/}">Home</a> page </p>
+<p>If you want to read all news, go here</p>
+<a href="/" th:href="@{/logged_in}">All the news</a> <br>
+<p>If you want to add some news, go here</p>
+<a href="/" th:href="@{/admin}">Admins page</a>
 </body>
 </html>

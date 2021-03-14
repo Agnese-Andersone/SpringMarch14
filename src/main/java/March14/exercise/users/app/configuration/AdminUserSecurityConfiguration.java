@@ -29,6 +29,8 @@ public class AdminUserSecurityConfiguration extends WebSecurityConfigurerAdapter
             .authorizeRequests()
             .antMatchers("/admin**").hasRole("ADMIN")
             .antMatchers("/logged_in").authenticated()
-            .anyRequest().permitAll();
+            .anyRequest().permitAll()
+            .and()
+            .formLogin();
     }
 }

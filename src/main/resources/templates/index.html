@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
 </head>
 <body>
-This is a page for everyone.
+This is for everybody.
+<a href="/" th:href="@{/login}">Login here</a>
+<a href="/" th:href="@{/logged_in}">Check this out</a>
 </body>
 </html>
